@@ -1,0 +1,201 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #b092e9;  /* lavender */
+    color: #2a0c23;             /* deep plum */
+}
+
+/* ----------------------------- */
+/* PLAYFUL HEADING FONT          */
+/* ----------------------------- */
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Header / nav */
+/* Header / nav */
+/* Header / nav */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 50px;
+    background-color: #c9b3f2;  /* Matches Light 2 from your palette */
+    border-bottom: 2px solid #b499e6; /* Soft darker border */
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a2b6f; /* deep purple readable text */
+}
+
+.main-nav {
+    display: flex;
+    gap: 18px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #4a2b6f; /* same deep purple */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-nav a.active {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ADD 50px MARGIN AROUND HERO IMAGE AREA */
+.hero-section {
+    position: relative;
+    margin: 50px auto; /* adds 50px top/bottom/left/right space */
+    max-width: 1100px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Know Me text positioned on the LEFT */
+.hero-text {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* "know me" main heading */
+.know-me {
+    font-size: 48px;
+    font-style: italic;
+    color: #9B2929; /* maroon */
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+/* tagline line */
+.tagline {
+    margin-top: 5px;
+    font-size: 18px;
+    font-style: italic;
+    color: #6d1a36;
+    opacity: 0.9;
+    text-transform: lowercase;
+}
+
+/* Page header (Traits page title) */
+.page-header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+}
+
+/* Traits grid */
+.traits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* slightly reduced spacing */
+    padding: 30px 60px 80px;
+}
+
+.trait-card {
+    max-width: 280px;
+    text-align: center;
+}
+
+.trait-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.trait-card h2 {
+    margin-bottom: 10px;
+}
+
+/* Two-column layouts (Beginning + StruggleDiary) */
+.side-by-side {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.side-image {
+    width: 50%;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.side-text {
+    flex: 1;
+}
+
+.side-text h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+/* StruggleDiary extra layout */
+.struggle-layout .side-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+}
+
+.portrait-image {
+    width: 100%;
+    max-width: 260px;
+    object-fit: cover;
+}
+
+.quote-box {
+    background-color: #f5e9ff;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Simple responsiveness for smaller screens */
+@media (max-width: 900px) {
+    .traits-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-by-side {
+        flex-direction: column;
+        padding: 30px 20px 50px;
+    }
+
+    .side-image,
+    .struggle-layout .side-left {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero-section {
+        margin: 20px;
+    }
+}
